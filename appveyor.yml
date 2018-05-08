@@ -1,0 +1,12 @@
+init:
+  - git config --global core.autocrlf input
+build_script:
+  - cmd: ./build.cmd
+test: off
+version: '{build}'
+artifacts:
+  - path: bin\*.nupkg
+deploy:
+- provider: NuGet
+  on:
+    branch: master       # remove to push symbols to SymbolSource.org
