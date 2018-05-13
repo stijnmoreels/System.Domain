@@ -29,9 +29,9 @@ namespace System.Domain.Tests
         }
 
         [Property]
-        public bool Monadic_Law_Ok_Holds(string x, Func<string, short> f)
+        public bool Monadic_Law_Ok_Holds(byte x, Func<byte, short> f)
         {
-            return x.AsResult<string, int>()
+            return x.AsResult<byte, int>()
                     .SelectMany(f.Compose(Result.Ok<short, int>))
                     .UnsafeGetOk()
                     .Equals(f(x));
@@ -49,9 +49,9 @@ namespace System.Domain.Tests
         }
 
         [Property]
-        public bool Monadic_Law_Error_Holds(string x, Func<string, short> f)
+        public bool Monadic_Law_Error_Holds(byte x, Func<byte, short> f)
         {
-            return x.AsResult<int, string>()
+            return x.AsResult<int, byte>()
                     .SelectManyError(f.Compose(Result.Error<int, short>))
                     .UnsafeGetError()
                     .Equals(f(x));

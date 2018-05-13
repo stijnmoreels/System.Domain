@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Functional;
 using System.Functional.Monads;
+using FsCheck;
 
 namespace System.Domain.Tests
 {
@@ -17,14 +18,16 @@ namespace System.Domain.Tests
         }
 
         [CustomProperty]
-        public bool Untrusted_Unwraps_Value_In_Result_Based_On_Given_Validation(object x, Result<object, object> m)
+        public bool Untrusted_Unwraps_Value_In_Result_Based_On_Given_Validation(
+            NonNull<object> x, 
+            Result<NonNull<object>, NonNull<object>> m)
         {
             return Untrusted<object>
                    .Wrap(x)
                    .Unwrap(_ => m)
                    .GetOk()
-                   .Equals(Maybe<object>.Nothing)
-                   .Equals(m.GetOk().Equals(Maybe<object>.Nothing));
+                   .Equals(Maybe<NonNull<object>>.Nothing)
+                   .Equals(m.GetOk().Equals(Maybe<NonNull<object>>.Nothing));
         }
     }
 }
