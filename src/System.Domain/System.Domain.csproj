@@ -12,7 +12,7 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-		<PackageId>Moreels.Domain</PackageId>
+		<PackageId>system-domain</PackageId>
 		<PackageTags>csharp domain ddd</PackageTags>
 	  <PackageLicenseUrl>https://raw.githubusercontent.com/stijnmoreels/System.Domain/master/LICENSE.txt</PackageLicenseUrl>
 	  <PackageProjectUrl>https://github.com/stijnmoreels/System.Domaini</PackageProjectUrl>
