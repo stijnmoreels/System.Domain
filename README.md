@@ -3,8 +3,6 @@
 This package contains some basic Domain models togheter with a `Result{TOk, TError}` type.
 Its purpose is to force the developer to use Domain Specific models instead of untrusted standard models like `int`, `string`, ...
 
-<style>img[alt=logo] { width: 200px; }</style>
-
 ![logo](docs/images/logo.png)
 
 ### Trusted Models
