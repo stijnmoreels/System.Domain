@@ -12,12 +12,14 @@
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
-		<PackageId>system-domain</PackageId>
-		<PackageTags>csharp domain ddd</PackageTags>
-	  <PackageLicenseUrl>https://raw.githubusercontent.com/stijnmoreels/System.Domain/master/LICENSE.txt</PackageLicenseUrl>
-	  <PackageProjectUrl>https://github.com/stijnmoreels/System.Domaini</PackageProjectUrl>
-	  <Authors>Stijn Moreels</Authors>
-	  <RepositoryUrl>https://github.com/stijnmoreels/System.Domain</RepositoryUrl>
+    <PackageId>system-domain</PackageId>
+    <PackageDescription>This package contains some basic Domain models togheter with a Result{TOk, TError} type.</PackageDescription>
+    <PackageTags>csharp domain ddd</PackageTags>
+    <PackageIconUrl>https://raw.githubusercontent.com/stijnmoreels/System.Domain/master/docs/images/icon.png</PackageIconUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/stijnmoreels/System.Domain/master/LICENSE.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/stijnmoreels/System.Domain</PackageProjectUrl>
+    <Authors>Stijn Moreels</Authors>
+    <RepositoryUrl>https://github.com/stijnmoreels/System.Domain</RepositoryUrl>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
