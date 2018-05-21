@@ -1,7 +1,7 @@
 ## What's in the `System.Domain`?
 
 [![Build status](https://ci.appveyor.com/api/projects/status/p4t68e0wawkfbk8x?svg=true)](https://ci.appveyor.com/project/stijnmoreels/system-domain)
-[![NuGet](https://img.shields.io/nuget/v/Nuget.Core.svg)](https://www.nuget.org/packages/system-domain/)
+[![NuGet Badge](https://buildstats.info/nuget/system-domain)](https://www.nuget.org/packages/system-domain)
 
 This package contains some basic Domain models togheter with a `Result{TOk, TError}` type.
 Its purpose is to force the developer to use Domain Specific models instead of untrusted standard models like `int`, `string`, ...

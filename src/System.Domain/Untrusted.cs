@@ -90,4 +90,21 @@ namespace System.Domain
             return EqualityComparer<T>.Default.GetHashCode(_value);
         }
     }
+
+    /// <summary>
+    /// Represents a wrapped value that's still untrusted.
+    /// The value can be unwrapped by calling the <see cref="Untrusted{T}.Unwrap{TResult}"/> or <see cref="Untrusted{T}.Unwrap{TResult,TError}"/> functions.
+    /// </summary>
+    public static class Untrusted
+    {
+        /// <summary>
+        /// Wraps the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public static Untrusted<T> Wrap<T>(T value)
+        {
+            return Untrusted<T>.Wrap(value);
+        }
+    }
 }

@@ -73,7 +73,7 @@ namespace System.Domain.Tests
             bool allGood = personResult.IsOk == (nameResult.IsOk && ageResult.IsOk && addressesResult.IsOk);
             bool allFail = personResult.IsError == (nameResult.IsError || ageResult.IsError || addressesResult.IsError);
 
-            return allGood.And(allFail);
+            return allGood.And(right: allFail);
         }
 
         class Person

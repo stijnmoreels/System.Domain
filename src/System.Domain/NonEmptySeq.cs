@@ -9,7 +9,7 @@ namespace System.Domain
     /// Sequence model representing a non-empty sequence (at least a single element).
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    /// <seealso cref="System.Collections.Generic.IEnumerable{T}" />
+    /// <seealso cref="Collections.Generic.IEnumerable{T}" />
     public class NonEmptySeq<T> : IEnumerable<T>
     {
         private readonly IEnumerable<T> _xs;
