@@ -13,7 +13,7 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <PackageId>system-domain</PackageId>
-    <PackageVersion>1.1.4</PackageVersion>
+    <PackageVersion>1.1.5</PackageVersion>
     <PackageDescription>This package contains some basic Domain models togheter with a Result{TOk, TError} type.</PackageDescription>
     <PackageTags>csharp domain ddd</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/stijnmoreels/System.Domain/master/docs/images/icon.png</PackageIconUrl>
