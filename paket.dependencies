@@ -4,6 +4,6 @@ source https://api.nuget.org/v3/index.json
 nuget fake
 nuget FsCheck.Xunit
 nuget FSharp.Formatting
-nuget system-functional >= 1.0.1
+nuget system-functional >= 1.0.2
 nuget Vsxmd 1.2.0
 nuget xunit.runner.visualstudio 2.3.1
