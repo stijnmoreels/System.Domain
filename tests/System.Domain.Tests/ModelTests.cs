@@ -5,6 +5,7 @@ using System.Functional.Monads;
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using FsCheck;
 using FsCheck.Xunit;
 using static System.Domain.Spec;
 
@@ -70,14 +71,14 @@ namespace System.Domain.Tests
         }
 
         [Property]
-        public bool Value_Gets_Only_Been_Read_Once(object x, FsCheck.PositiveInt times)
+        public bool Value_Gets_Only_Been_Read_Once(NonNull<object> x, FsCheck.PositiveInt times)
         {
             IEnumerable<Maybe<object>> xs =
-                Enumerable.Repeat(ReadOnce.Wrap(x), times.Get)
+                Enumerable.Repeat(ReadOnce.Wrap(x.Get), times.Get)
                           .Select(f => f());
 
             IEnumerable<Maybe<object>> ys =
-                new[] { Maybe.Just(x) }
+                new[] { Maybe.Just(x.Get) }
                     .Concat(Enumerable.Repeat(Maybe<object>.Nothing, times.Get - 1));
 
             return xs.SequenceEqual(ys);
